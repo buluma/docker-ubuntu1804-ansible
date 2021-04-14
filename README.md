@@ -1,6 +1,6 @@
 # Ubuntu 18.04 LTS (Bionic) Ansible Test Image
 
-[![CI](https://github.com/buluma/docker-ubuntu1804-ansible/workflows/Build/badge.svg?branch=main&event=push)](https://github.com/geerlingguy/docker-ubuntu1804-ansible/actions?query=workflow%3ABuild) [![Docker pulls](https://img.shields.io/docker/pulls/buluma/docker-ubuntu1804-ansible)](https://hub.docker.com/r/buluma/docker-ubuntu1804-ansible/)
+[![CI](https://github.com/buluma/docker-ubuntu1804-ansible/workflows/Build/badge.svg?branch=main&event=push)](https://github.com/buluma/docker-ubuntu1804-ansible/actions?query=workflow%3ABuild) [![Docker pulls](https://img.shields.io/docker/pulls/buluma/docker-ubuntu1804-ansible)](https://hub.docker.com/r/buluma/docker-ubuntu1804-ansible/) [![Docker](https://github.com/buluma/docker-ubuntu1804-ansible/actions/workflows/docker-publish.yml/badge.svg)](https://github.com/buluma/docker-ubuntu1804-ansible/actions/workflows/docker-publish.yml)
 
 Ubuntu 18.04 LTS (Bionic) Docker container for Ansible playbook and role testing.
 
@@ -26,7 +26,7 @@ This image is built on Docker Hub automatically any time the upstream OS contain
 
   1. [Install Docker](https://docs.docker.com/engine/installation/).
   2. Pull this image from Docker Hub: `docker pull buluma/docker-ubuntu1804-ansible:latest` (or use the image you built earlier, e.g. `ubuntu1804-ansible:latest`).
-  3. Run a container from the image: `docker run --detach --privileged --volume=/sys/fs/cgroup:/sys/fs/cgroup:ro geerlingguy/docker-ubuntu1804-ansible:latest` (to test my Ansible roles, I add in a volume mounted from the current working directory with ``--volume=`pwd`:/etc/ansible/roles/role_under_test:ro``).
+  3. Run a container from the image: `docker run --detach --privileged --volume=/sys/fs/cgroup:/sys/fs/cgroup:ro buluma/docker-ubuntu1804-ansible:latest` (to test my Ansible roles, I add in a volume mounted from the current working directory with ``--volume=`pwd`:/etc/ansible/roles/role_under_test:ro``).
   4. Use Ansible inside the container:
     a. `docker exec --tty [container_id] env TERM=xterm ansible --version`
     b. `docker exec --tty [container_id] env TERM=xterm ansible-playbook /path/to/ansible/playbook.yml --syntax-check`
