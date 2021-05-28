@@ -1,0 +1,15 @@
+on: [push, pull_request]
+name: YAML lint
+jobs:
+  konstruktoidYAMLLint:
+    name: Buluma YAML lint
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+      - name: Buluma YAML lint
+        uses: ./
+      - name: Create Issue
+        if: failure()
+        uses: buluma/create-an-issue@v2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
