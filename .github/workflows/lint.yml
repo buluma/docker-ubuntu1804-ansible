@@ -1,5 +1,12 @@
-on: [push, pull_request]
 name: YAML lint
+on:
+  pull_request:
+  push:
+    branches:
+      - master
+  schedule:
+    - cron: "10 1 * 0"
+
 jobs:
   konstruktoidYAMLLint:
     name: Buluma YAML lint
