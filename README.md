@@ -7,8 +7,6 @@ Ubuntu 18.04 LTS (Bionic) Docker container for Ansible playbook and role testing
 ## Tags
 
   - `latest`: Latest stable version of Ansible.
-  - `python2`: Deprecated.
-  - `testing`: Deprecated.
 
 The latest tag is a lightweight image for basic validation of Ansible playbooks.
 
