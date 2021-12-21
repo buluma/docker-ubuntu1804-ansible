@@ -15,10 +15,10 @@ RUN apt-get update \
        libssl-dev \
        libyaml-dev \
        python-pip \
-       # python3-dev \
-       # python3-setuptools \
+       python-dev \
+       python-setuptools \
        # python3-pip \
-       # python3-yaml \
+       python-yaml \
        software-properties-common \
        rsyslog systemd systemd-cron sudo iproute2 \
     && apt-get clean \
