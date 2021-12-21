@@ -14,10 +14,11 @@ RUN apt-get update \
        libffi-dev \
        libssl-dev \
        libyaml-dev \
-       python3-dev \
-       python3-setuptools \
-       python3-pip \
-       python3-yaml \
+       python-pip \
+       # python3-dev \
+       # python3-setuptools \
+       # python3-pip \
+       # python3-yaml \
        software-properties-common \
        rsyslog systemd systemd-cron sudo iproute2 \
     && apt-get clean \
