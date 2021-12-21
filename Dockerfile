@@ -1,4 +1,4 @@
-FROM ubuntu:18.04
+FROM buluma/ubuntu:18.04
 LABEL maintainer="Shadow Walker"
 
 ARG DEBIAN_FRONTEND=noninteractive
