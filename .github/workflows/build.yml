@@ -2,12 +2,21 @@
 name: Build and Push Container
 
 on:
-  pull_request:
   push:
     branches:
-      - master
+      - main
+  workflow_dispatch:
+    inputs:
+      debug:
+        type: boolean
+        required: false
+        default: 'false'
   schedule:
-    - cron: '40 * * * *'
+    - cron: '15 4/4 * * *'
+
+concurrency:
+  group: ${{ github.ref }}-${{ github.workflow }}
+  cancel-in-progress: true
 
 jobs:
   # Test the image builds and works correctly.
